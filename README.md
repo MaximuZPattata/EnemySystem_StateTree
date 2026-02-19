@@ -44,19 +44,30 @@ Testing out the state tree tool for the enemy system(Includes usage of Enemy AI 
 
 
 
-\###### Note: 
+\###### Note:
 
 1. It is heavily visually scripted(Only Blueprints). If time permits, I will get into the core of it through C++.
-2. There seems to be a bug - After healing, the Noise Sense perception may report an irregular stimulus location. Will look into that further.
-3. I haven't been able to add any visual details to the prototype. Most of it is represented using the print string logic.
+
+2\. The last heal state can be better adjusted if parallel states are used so that the enemy can change its current state, but still gets healed as long as it is in the safe point.
 
 
+
+###### \######## Orb States:
+
+###### Added an Orb mesh above the enemy to indicate the current state. As the enemy's state changes, the orb changes its color. The color indications are as follows:
+
+1. ###### White - Idle
+2. ###### Light Blue - Patrol
+3. ###### Yellow - Alert
+4. ###### Orange - Chase
+5. ###### Red - Attack
+6. ###### Blue - Investigate
+7. ###### Green - Retreat
+8. ###### Purple - Heal
 
 
 
 ###### **####### Controls:**
-
-###### 
 
 1. ###### **Move around using WASD. Space for jump and Mouse for Camera.**
 2. ###### **Q to create a noise report - Enemy moves to an alert state and walks towards the noise location to investigate.**
